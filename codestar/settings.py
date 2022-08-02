@@ -29,7 +29,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = development
+DEBUG = False
 
 ALLOWED_HOSTS = [
     'codestar-am-django.herokuapp.com',
@@ -96,7 +96,7 @@ WSGI_APPLICATION = 'codestar.wsgi.application'
 # else:
 print("loading -postgres db....")
 DATABASES = {
-    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+    'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
 }
 
 
